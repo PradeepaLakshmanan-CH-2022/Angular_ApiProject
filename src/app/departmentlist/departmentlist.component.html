@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>DepartmentId</th>
+            <th>DepartmentName</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dept of departmentlist">
+            <td>{{dept.departmentId}}</td>
+            <td>{{dept.departmentName}}</td>
+            <td>
+
+                <button (click)="updateDepartment(dept.departmentId)" class="btn btn-primary"> Update</button>
+                <button (click)="deleteDepartment(dept.departmentId)" class="btn btn-danger" style="margin-left: 10px">
+                    Delete</button>
+            </td>
+        </tr>
+
+    </tbody>
+
+
+</table>

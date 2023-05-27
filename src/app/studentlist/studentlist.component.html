@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>StudentId</th>
+            <th>StudentName</th>
+            <th>Course</th>
+            <th>Specialization</th>
+            <th>StudentPercentage</th>
+            <th>DepartmentId</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentlist">
+            <td>{{student.studentId}}</td>
+            <td>{{student.studentName}}</td>
+            <td>{{student.course}}</td>
+            <td>{{student.specialization}}</td>
+            <td>{{student.studentPercentage}}</td>
+            <td>{{student.departmentId}}</td>
+            <td>
+
+                <button (click)="updateStudent(student.studentId)" class="btn btn-primary"> Update</button>
+                <button (click)="deleteStudent(student.studentId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
